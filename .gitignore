@@ -12,6 +12,17 @@ dist
 dist-ssr
 *.local
 
+# Impeccable local/ephemeral state (design.json sidecar stays tracked)
+.impeccable/review/
+.impeccable/live/
+.impeccable/config.local.json
+
+# AI coding-agent tooling scaffolding — not portfolio content
+.claude/
+.github/agents/
+.github/hooks/
+.github/skills/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

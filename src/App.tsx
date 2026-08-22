@@ -1,4 +1,4 @@
-import { Rail } from "./components/Rail";
+import { Masthead } from "./components/Masthead";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Experience } from "./components/Experience";
@@ -10,9 +10,9 @@ import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-bg text-ink">
-      <Rail />
-      <main className="md:pl-[280px]">
+    <div className="min-h-screen bg-paper text-ink">
+      <Masthead />
+      <main>
         <Hero />
         <About />
         <Experience />

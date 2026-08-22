@@ -1,26 +1,25 @@
 @import "tailwindcss";
 
-@import "@fontsource/syne/700.css";
-@import "@fontsource/syne/800.css";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
+@import "@fontsource/schibsted-grotesk/500.css";
+@import "@fontsource/schibsted-grotesk/600.css";
+@import "@fontsource/schibsted-grotesk/700.css";
+@import "@fontsource/literata/400.css";
+@import "@fontsource/literata/500.css";
+@import "@fontsource/literata/400-italic.css";
 @import "@fontsource/jetbrains-mono/400.css";
-@import "@fontsource/jetbrains-mono/500.css";
 
 @theme {
-  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Literata", ui-serif, Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 
-  --color-bg: #0a0f17;
-  --color-panel: #111826;
-  --color-panel-raised: #161f2e;
-  --color-line: #24303f;
-  --color-ink: #e9edf3;
-  --color-muted: #8b96a6;
-  --color-amber: #ffb020;
-  --color-phosphor: #35d68a;
+  --color-paper: #f5f6f3;
+  --color-paper-raised: #ffffff;
+  --color-ink: #14171a;
+  --color-ink-muted: #5b6570;
+  --color-line: #dde1d9;
+  --color-accent: #0f8f63;
+  --color-accent-ink: #eefaf4;
 }
 
 @layer base {
@@ -47,35 +46,35 @@
   }
 
   body {
-    background-color: var(--color-bg);
+    background-color: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
-    background-color: var(--color-amber);
-    color: var(--color-bg);
+    background-color: var(--color-accent);
+    color: var(--color-accent-ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-amber);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
   }
 }
 
 @layer utilities {
-  .bg-grid {
-    background-image:
-      linear-gradient(to right, var(--color-line) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--color-line) 1px, transparent 1px);
-    background-size: 40px 40px;
+  .mark {
+    background-image: linear-gradient(var(--color-accent), var(--color-accent));
+    background-repeat: no-repeat;
+    background-position: 0 96%;
+    background-size: 100% 0.16em;
   }
 
   .reveal {
     opacity: 0;
     transform: translateY(14px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.7s ease, transform 0.7s ease;
   }
 
   .reveal.in-view {

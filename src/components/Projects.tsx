@@ -3,35 +3,29 @@ import { projects } from "../data";
 import { SectionHeading } from "./SectionHeading";
 import { useReveal } from "../hooks/useReveal";
 
-function ProjectCard({ project, index }: { project: (typeof projects)[number]; index: number }) {
+function ProjectEntry({ project, index }: { project: (typeof projects)[number]; index: number }) {
   const ref = useReveal<HTMLDivElement>();
   return (
     <div
       ref={ref}
-      className="reveal flex flex-col rounded-lg border border-line bg-panel p-6 transition-colors hover:border-muted"
+      className="reveal border-t border-line py-8 first:border-t-0 first:pt-0"
       style={{ transitionDelay: `${index * 90}ms` }}
     >
-      <div className="flex items-start justify-between gap-3">
-        <h3 className="font-display text-lg font-bold text-ink">{project.title}</h3>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h3 className="font-display text-xl font-semibold text-ink">{project.title}</h3>
         {project.pending && (
-          <span className="shrink-0 rounded-full border border-amber/40 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-amber">
-            Details pending
-          </span>
+          <span className="text-xs italic text-ink-muted">Details pending</span>
         )}
       </div>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{project.summary}</p>
-      <div className="mt-5 flex flex-wrap items-center gap-2">
-        {project.tags.map((tag) => (
-          <span key={tag} className="rounded-full border border-line px-3 py-1 font-mono text-[10px] text-muted">
-            {tag}
-          </span>
-        ))}
+      <p className="mt-2 text-[15px] leading-relaxed text-ink-muted">{project.summary}</p>
+      <div className="mt-3 flex items-center gap-4">
+        <p className="text-sm text-ink-muted">{project.tags.join(" · ")}</p>
         {project.link && (
           <a
             href={project.link}
             target="_blank"
             rel="noreferrer"
-            className="ml-auto inline-flex items-center gap-1.5 font-mono text-[11px] text-phosphor hover:underline"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-accent"
           >
             View
             <ExternalLink size={12} />
@@ -44,12 +38,12 @@ function ProjectCard({ project, index }: { project: (typeof projects)[number]; i
 
 export function Projects() {
   return (
-    <section id="projects" className="border-b border-line px-6 py-20 md:px-16 md:py-28">
-      <div className="mx-auto max-w-5xl">
-        <SectionHeading eyebrow="// BUILD LOG" title="Selected projects" />
-        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+    <section id="projects" className="border-b border-line px-6 py-20 md:px-10 md:py-28">
+      <div className="mx-auto max-w-3xl">
+        <SectionHeading eyebrow="Projects" title="Selected work" />
+        <div>
           {projects.map((project, i) => (
-            <ProjectCard key={project.title} project={project} index={i} />
+            <ProjectEntry key={project.title} project={project} index={i} />
           ))}
         </div>
       </div>

@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-22T00:00:00.000Z",
+  "title": "Design System: Kareem Mohamed — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#f5f6f3", "tonalRamp": ["#1a1c1a", "#33362f", "#4d5047", "#6b6f63", "#a6aa9d", "#d3d6cd", "#eceee9", "#f5f6f3"] },
+      "paper-raised": { "role": "neutral", "displayName": "Paper Raised", "canonical": "#ffffff", "tonalRamp": ["#1a1a1a", "#333333", "#4d4d4d", "#666666", "#999999", "#cccccc", "#f2f2f2", "#ffffff"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#14171a", "tonalRamp": ["#0a0b0d", "#14171a", "#2b2f33", "#454a4f", "#63686d", "#8b9095", "#c3c7ca", "#e9edf0"] },
+      "ink-muted": { "role": "neutral", "displayName": "Ink Muted", "canonical": "#5b6570", "tonalRamp": ["#202428", "#343b41", "#48505a", "#5b6570", "#7c8590", "#a3aab1", "#c9cdd2", "#e8eaec"] },
+      "line": { "role": "neutral", "displayName": "Line", "canonical": "#dde1d9", "tonalRamp": ["#3a3e37", "#565b52", "#787d72", "#9ba095", "#bcc0b6", "#dde1d9", "#eceee8", "#f7f8f5"] },
+      "accent": { "role": "primary", "displayName": "Signal Green", "canonical": "#0f8f63", "tonalRamp": ["#062c20", "#0b4a35", "#0f8f63", "#14b37e", "#3fca9c", "#7fdcbe", "#bfeddc", "#eefaf4"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline, section titles, entry titles, eyebrows/labels." },
+      "body": { "displayName": "Body", "purpose": "Long-form paragraphs and list bullets." },
+      "label": { "displayName": "Label", "purpose": "Uppercase tracked eyebrows and masthead nav." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-reveal", "value": "ease", "purpose": "Scroll-triggered fade/rise on section content (0.7s), respects prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink-filled CTA, one per major section (email).",
+      "html": "<a class=\"ds-btn-primary\" href=\"mailto:you@example.com\"><span>Email me</span></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #14171a; color: #ffffff; padding: 14px 24px; border-radius: 4px; font-family: 'Schibsted Grotesk', sans-serif; font-weight: 500; font-size: 14px; transition: transform 0.2s; } .ds-btn-primary:hover { transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #0f8f63; outline-offset: 3px; }"
+    },
+    {
+      "name": "Marked Link",
+      "kind": "custom",
+      "refersTo": "link-marked",
+      "description": "Underlined text link; underline shifts to the accent on hover. Used for secondary actions.",
+      "html": "<a class=\"ds-link-marked\" href=\"#\">View experience</a>",
+      "css": ".ds-link-marked { color: #14171a; font-weight: 500; font-size: 14px; text-decoration: underline; text-decoration-color: #dde1d9; text-decoration-thickness: 2px; text-underline-offset: 4px; } .ds-link-marked:hover { text-decoration-color: #0f8f63; }"
+    },
+    {
+      "name": "Timeline Node",
+      "kind": "custom",
+      "refersTo": "timeline-node",
+      "description": "Accent-ringed circle marking one Experience entry on the vertical hairline rail.",
+      "html": "<span class=\"ds-timeline-node\"></span>",
+      "css": ".ds-timeline-node { display: inline-block; width: 10px; height: 10px; border-radius: 9999px; border: 2px solid #0f8f63; background: #f5f6f3; }"
+    },
+    {
+      "name": "Marked Headline Phrase",
+      "kind": "custom",
+      "refersTo": "mark-utility",
+      "description": "Thin accent underline band behind a key phrase in a headline — the system's one 'highlighter' moment per viewport.",
+      "html": "<span class=\"ds-mark\">not a lane.</span>",
+      "css": ".ds-mark { background-image: linear-gradient(#0f8f63, #0f8f63); background-repeat: no-repeat; background-position: 0 96%; background-size: 100% 0.16em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Paper",
+    "overview": "The site reads like a technical working paper, not a finished résumé or a dashboard: strong typographic hierarchy carries the authority, generous margins give the content room to breathe, and one confident accent color is spent the way a reader marks a key claim — never as a status light, never as page-filling chrome. A faint growth-curve figure runs through the page as watermark and, in Experience, as the literal spine of the timeline.",
+    "keyCharacteristics": [
+      "Editorial masthead + single reading column, not a persistent dashboard sidebar",
+      "One accent color (signal green), spent only on marks, links, and timeline nodes",
+      "Display sans for headline authority, text-optimized serif for long-form reading",
+      "A single growth-curve SVG figure reused as hero watermark and Experience spine"
+    ],
+    "rules": [
+      { "name": "The One Mark Rule", "body": "The accent color never fills a region larger than a timeline node or an underline stroke.", "section": "colors" },
+      { "name": "The No-Chrome Rule", "body": "Labels and eyebrows are set in the display sans, not a monospace face.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Every surface sits at the same visual depth; nothing is elevated with a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do spend the accent color only on the mark stroke, link-hover underlines, and timeline nodes.",
+      "Do keep every section inside the single max-w-3xl reading column.",
+      "Do set eyebrows and labels in Schibsted Grotesk, never mono."
+    ],
+    "donts": [
+      "Don't reintroduce a persistent sidebar/dashboard nav.",
+      "Don't add a second saturated accent color or a status-light pairing.",
+      "Don't add shadows, card elevation, or pill/chip-styled tags.",
+      "Don't let the growth-curve watermark exceed ~35% opacity or grow more visually complex."
+    ]
+  }
+}
