@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Secrets / environment files — should never be committed
+.env
+.env.*
+!.env.example
+
 # Impeccable local/ephemeral state (design.json sidecar stays tracked)
 .impeccable/review/
 .impeccable/live/
