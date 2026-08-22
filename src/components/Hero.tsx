@@ -36,15 +36,15 @@ export function Hero() {
             <h1 className="mt-5 font-display text-[2.75rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl">
               Software, engineered
               <br />
-              like it has to <span className="text-amber">fly.</span>
+              <span className="text-amber">properly.</span>
             </h1>
           </RevealBlock>
 
           <RevealBlock delay={170}>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              Computer Engineering graduate building AI-powered industrial automation at{" "}
-              <span className="text-ink">Siemens</span>. Two years inside aircraft certification and data
-              pipelines taught me what "production-ready" actually means.
+              Computer Engineering graduate focused on software development and data analysis —
+              building automation tooling, shaping data pipelines, and writing code meant to hold up
+              in production.
             </p>
           </RevealBlock>
 
@@ -81,11 +81,11 @@ export function Hero() {
             <dl className="mt-4 space-y-3 font-mono text-[12.5px]">
               <div className="flex items-baseline justify-between gap-4">
                 <dt className="text-muted">ROLE</dt>
-                <dd className="text-right text-ink">Software Engineer, Siemens</dd>
+                <dd className="text-right text-ink">Software Developer · Data Analyst</dd>
               </div>
               <div className="flex items-baseline justify-between gap-4">
                 <dt className="text-muted">LOCATION</dt>
-                <dd className="text-right text-ink">Cairo, EG</dd>
+                <dd className="text-right text-ink">{profile.location}</dd>
               </div>
               <div className="flex items-baseline justify-between gap-4">
                 <dt className="text-muted">EDUCATION</dt>

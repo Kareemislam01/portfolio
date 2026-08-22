@@ -1,26 +1,26 @@
 export const profile = {
   name: "Kareem Mohamed",
-  role: "Software Engineer",
+  role: "Software Developer Intern",
   tagline: "AI · Industrial Systems · Software",
-  location: "Montreal, QC — currently Cairo, EG",
+  location: "Montreal, QC",
   email: "kareem.islam2001@gmail.com",
-  linkedin: "https://www.linkedin.com/in/kareem-imohamed",
+  linkedin: "https://www.linkedin.com/in/kareem-i-mohamed/",
   // TODO(kareem): add your GitHub URL once confirmed.
   github: "",
-  status: "Software Engineer @ Siemens — Industrial Copilot",
+  status: "Software Developer Intern @ Siemens — Industrial Copilot",
 };
 
 export const domains = [
-  { label: "AI / Software", color: "amber" as const, detail: "Industrial Copilot, automation" },
-  { label: "Data", color: "phosphor" as const, detail: "Analysis, pipelines, tooling" },
-  { label: "Avionics", color: "amber" as const, detail: "Certification, systems integration" },
+  { label: "AI / Software", color: "amber" as const, detail: "Automation, applications" },
+  { label: "Data Analysis", color: "phosphor" as const, detail: "Analyst experience, pipelines, reporting" },
+  { label: "Front-End", color: "amber" as const, detail: "HTML, CSS, JavaScript" },
 ];
 
 export const about = {
   eyebrow: "// ABOUT",
   paragraphs: [
     "I'm a Computer Engineering graduate who found the intersection of software, data, and industrial systems more interesting than any one of them alone.",
-    "Before writing AI-powered automation software at Siemens, I spent time inside an aircraft avionics program at Bombardier and behind data pipelines as an analyst — two different worlds that taught the same lesson: systems fail quietly until you instrument them properly.",
+    "Before writing AI-powered automation software at Siemens, I worked as a data analyst — and before that, spent time in an aircraft avionics program at Bombardier. Different worlds, but they taught the same lesson: systems fail quietly until you instrument them properly.",
     "I write Java and Python by default, reach for SQL and VBA when data needs shape, and I'm as comfortable making an interface feel right as I am making a backend behave. Based in Montreal, currently building in Cairo — always up for a technical conversation, especially over coffee.",
   ],
 };
@@ -38,7 +38,7 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     company: "Siemens",
-    role: "Software Engineer",
+    role: "Software Developer Intern",
     start: "AUG 2026",
     end: "PRESENT",
     duration: "1 mo",

@@ -73,7 +73,7 @@ export function Rail() {
             </span>
           </a>
           <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-            Mohamed / Software Eng.
+            Mohamed / Software Dev. Intern
           </p>
 
           <div className="mt-9 rounded border border-line bg-panel-raised px-4 py-3.5">
