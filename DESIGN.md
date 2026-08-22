@@ -1,138 +1,150 @@
 ---
 name: Kareem Mohamed — Portfolio
-description: A technical working paper, not a dashboard — active, unfinished thinking made public.
+description: A terminal directory, not a résumé — bold wayfinding signage for a career with more than one gate.
 colors:
-  paper: "#f5f6f3"
-  paper-raised: "#ffffff"
-  ink: "#14171a"
-  ink-muted: "#5b6570"
-  line: "#dde1d9"
-  accent: "#0f8f63"
-  accent-ink: "#eefaf4"
+  blue: "#0a2f6e"
+  blue-deep: "#071f4d"
+  paper: "#ffffff"
+  paper-dim: "#f2f3f5"
+  ink: "#0a0a0a"
+  ink-muted: "#55585c"
+  on-blue: "#ffffff"
+  on-blue-muted: "#a9bcdd"
+  line: "#d8dbe0"
+  line-on-blue: "#23438a"
+  amber: "#f2b705"
 typography:
   display:
-    fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
-    fontWeight: 600
+    fontFamily: "Overpass, ui-sans-serif, system-ui, sans-serif"
+    fontWeight: 800
     letterSpacing: "-0.01em"
   body:
-    fontFamily: "Literata, ui-serif, Georgia, serif"
+    fontFamily: "Overpass, ui-sans-serif, system-ui, sans-serif"
     fontWeight: 400
+    fontSize: "0.875rem"
     lineHeight: 1.6
   label:
-    fontFamily: "Schibsted Grotesk, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Overpass, ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
-    fontWeight: 500
-    letterSpacing: "0.14em"
+    fontWeight: 700
+    letterSpacing: "0.16em"
 rounded:
-  sm: "4px"
-  full: "9999px"
+  none: "0px"
 components:
   button-primary:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper-raised}"
-    rounded: "{rounded.sm}"
+    backgroundColor: "{colors.amber}"
+    textColor: "{colors.blue-deep}"
+    rounded: "{rounded.none}"
     padding: "14px 24px"
-  link-marked:
-    textColor: "{colors.ink}"
-    typography: "{typography.display}"
+  zone-badge:
+    backgroundColor: "{colors.blue}"
+    textColor: "{colors.on-blue}"
+    rounded: "{rounded.none}"
+    size: "40px"
 ---
 
 # Design System: Kareem Mohamed — Portfolio
 
 ## Overview
 
-**Creative North Star: "The Working Paper"**
+**Creative North Star: "The Terminal Directory"**
 
-The site reads like a technical working paper, not a finished résumé or a dashboard: strong typographic hierarchy carries the authority, generous margins give the content room to breathe, and one confident accent color is spent the way a reader marks a key claim — never as a status light, never as page-filling chrome. A faint growth-curve figure runs through the page as watermark and, in Experience, as the literal spine of the timeline: data-as-motif, present but never dominant.
+The site reads as an airport wayfinding system, not a résumé and not a dashboard: committed signage-blue field panels alternate with high-contrast white, one signal-amber highlight marks arrows, live status, and key phrases, and a single sans family (Overpass — derived from U.S. highway signage type) carries every weight of the hierarchy through scale alone. Sections are zones, lettered A through F on a fixed badge, the way a terminal directory numbers its gates. The Experience section is a departures board: each role flips into place, and the current role carries a "Boarding Now" tag instead of a generic "Present" label.
 
-The system explicitly rejects the terminal/instrument-panel identity this site shipped with previously (dark ground, dual amber/phosphor accent lights, mono-labeled chrome). That look is now anti-reference only; nothing about materials, palette, or component language carries forward from it.
+This is the second visual identity this project has shipped. Both prior systems — a dark avionics/HUD instrument panel, and a quiet cream-and-serif editorial working paper — are anti-reference only. Nothing about their palettes, type, or component language carries forward: no dual-accent status lights, no monospace eyebrow chrome, no restrained single-accent-on-neutral palette. This system is deliberately bolder and more color-committed than either.
 
 **Key Characteristics:**
-- Editorial masthead + single reading column, not a persistent dashboard sidebar
-- One accent color (signal green), spent only on marks, links, and timeline nodes
-- Display sans for headline authority, text-optimized serif for long-form reading
-- A single growth-curve SVG figure reused as hero watermark and Experience spine
+- Committed blue/white color-blocking, not a neutral ground with a timid accent
+- One typeface family (Overpass) for everything — no display/body/mono split
+- Zone-lettered sections (A–F) as a real structural device, not decoration
+- A departures-board flip is the one signature motion moment, reserved for Experience only
+- Pictogram icons (flat, geometric, single-color) stand in for domain expertise the way gate signage uses pictograms for services
 
 ## Colors
 
-A restrained palette: near-white paper, soft-black ink, and exactly one accent.
+A committed strategy: one saturated field color carries most of the surface, one signal color marks action and status.
 
 ### Primary
-- **Signal Green** (#0f8f63): the one confident accent. Used only for the `.mark` underline stroke behind key phrases, link-hover underline color, and the timeline node rings in Experience. Never fills a background larger than a small dot or a thin stroke.
+- **Terminal Blue** (#0a2f6e): the field color. Fills the masthead, hero, and contact/footer panels — never used as a small accent, always as a full region.
+- **Terminal Blue Deep** (#071f4d): footer only, one shade below Terminal Blue for a grounding close.
+
+### Secondary
+- **Signal Amber** (#f2b705): the one highlight color. Used for primary CTAs, the `.mark` underline, arrows, zone badges' focus ring, current-item status tags, and list bullets. Never fills a background region larger than a button or a small badge.
 
 ### Neutral
-- **Paper** (#f5f6f3): page background. Deliberately cool, not warm cream — avoids the cream-plus-serif cliché.
-- **Paper Raised** (#ffffff): button text color and any surface that needs to sit slightly above paper.
-- **Ink** (#14171a): headline and body-emphasis text, primary button fill.
-- **Ink Muted** (#5b6570): body copy, captions, secondary metadata (dates, locations, tags).
-- **Line** (#dde1d9): all hairline borders and dividers.
+- **Paper** (#ffffff): default section background.
+- **Paper Dim** (#f2f3f5): the Experience section only, to set the departures board apart as its own zone.
+- **Ink** (#0a0a0a): headline and body text on light backgrounds.
+- **Ink Muted** (#55585c): captions, dates, secondary copy on light backgrounds.
+- **On Blue / On Blue Muted** (#ffffff / #a9bcdd): text on Terminal Blue panels.
+- **Line / Line on Blue** (#d8dbe0 / #23438a): hairline dividers, contextual to background.
 
 ### Named Rules
-**The One Mark Rule.** The accent color never fills a region larger than a timeline node or an underline stroke. If a design needs a second saturated color to feel finished, the layout is doing too little, not the palette.
+**The One Signal Rule.** Amber is the only color that means "look here" or "this is current." It never becomes a field color, and blue never functions as a status highlight.
 
 ## Typography
 
-**Display Font:** Schibsted Grotesk (with ui-sans-serif, system-ui fallback)
-**Body Font:** Literata (with ui-serif, Georgia fallback)
-**Label/Mono Font:** JetBrains Mono — used minimally, for the direction-contract comment only; not part of the visible UI type system.
+**Display Font:** Overpass (with ui-sans-serif, system-ui fallback)
+**Body Font:** Overpass (same family, regular weight)
+**Label/Mono Font:** none — no monospace anywhere in the visible UI.
 
-**Character:** A confident newspaper-grotesk for headlines, paired with a serif built specifically for on-screen long-form reading. The pairing argues for authority (display) and time-on-page (body) rather than a single do-everything sans.
+**Character:** One signage typeface doing every job in the hierarchy through weight and size alone — 800 for headlines and role titles, 700 for labels and zone letters, 600 for company/tag lines, 400 for body copy. Overpass is derived from U.S. highway signage type (the Highway Gothic lineage), which is the actual real-world justification for the pick: it is legible at a distance and reads as infrastructure, not as a blog.
 
 ### Hierarchy
-- **Display** (600, `text-5xl`–`text-6xl`, leading 1.05): hero headline only.
-- **Headline** (600, `text-3xl`–`text-4xl`): section titles.
-- **Title** (600, `text-xl`): entry titles (role, project, school).
-- **Body** (400, `text-[15px]`–`text-lg`, 1.6 line-height): paragraphs and bullets, ~65–75ch measure.
-- **Label** (500, `text-sm`, tracking 0.14em, uppercase, Schibsted not mono): section eyebrows and masthead nav.
+- **Display** (800, uppercase, `text-5xl`–`text-7xl`, leading ~1.02): hero headline only.
+- **Headline** (800, uppercase, `text-3xl`–`text-4xl`): section titles, paired with the zone badge.
+- **Title** (800, uppercase, `text-xl`): entry titles (role, project, school).
+- **Body** (400, `text-sm`–`text-lg`, 1.6 line-height): paragraphs and bullets.
+- **Label** (700, `text-xs`–`text-sm`, tracking 0.14–0.16em, uppercase): eyebrows, nav, badges, tags.
 
 ### Named Rules
-**The No-Chrome Rule.** Labels and eyebrows are set in the display sans, not a monospace face. Monospace is reserved for the build-time direction contract; it never appears as visible UI chrome again.
+**The One Face Rule.** Every piece of type on the page is Overpass. If a component seems to need a different face, the fix is a different weight or size, not a second family.
 
 ## Layout
 
-Single reading column, `max-w-3xl` (48rem), centered, consistent across every section — no full-bleed dashboard sections. The masthead is a sticky top bar (not a persistent sidebar), `max-w-5xl`, slightly wider than the content column to give the nav room to breathe. Section rhythm: `py-20` mobile, `py-28` desktop, separated by single hairline `border-line` rules — no shadows, no card elevation. Experience uses a left-aligned vertical hairline as a timeline rail with accent-ringed nodes per entry, echoing the growth-curve watermark's role as a data-motif spine.
+Single reading column, `max-w-3xl` (48rem) for content sections, `max-w-5xl` for the masthead. Sections alternate background between Paper and Paper Dim/Blue to read as distinct zones — this is the primary structural device, more load-bearing than spacing alone. Section rhythm: `py-16` mobile, `py-24` desktop. Every section opens with a zone badge (a filled blue square with a bold white letter, A–F) beside the section title — this pairing is fixed and never appears without the badge.
 
 ## Elevation & Depth
 
-Flat by design. No shadows anywhere in the system; depth is conveyed only through the paper/paper-raised distinction and hairline borders, never through elevation.
+Flat by design, same as the sections before it — no shadows anywhere. Depth and grouping come entirely from color-blocked panels (blue vs. paper vs. paper-dim) and hairline dividers, never from elevation.
 
 ### Named Rules
-**The Flat-By-Default Rule.** Every surface sits at the same visual depth. If something needs to stand out, it earns that through typography or the accent mark, never a shadow.
+**The Flat Panel Rule.** A section either IS a color (full-bleed blue) or sits flat on paper. Nothing is elevated above its panel.
 
 ## Shapes
 
-Minimal radius throughout (`4px` on buttons; `9999px`/full-round only on the tiny timeline nodes). No large rounded cards, no pill-shaped chips or tags — tags render as plain interpunct-separated text, not bordered pills, to keep the page reading as a publication rather than a UI kit.
+Hard corners everywhere — zero border-radius on buttons, badges, pictogram tiles, and status tags. This is a deliberate departure from both prior systems (which used 4px and full-round respectively): signage doesn't round its corners, and the hard edge reinforces the "infrastructure, not software chrome" character.
 
 ## Components
 
 ### Buttons
-- **Shape:** 4px radius.
-- **Primary:** ink background, paper-raised text, `px-5 py-3`. Reserved for the one primary action per section (email).
-- **Secondary:** not a button — a plain underlined text link (`decoration-line`, hover `decoration-accent`) with a trailing arrow icon.
+- **Shape:** square corners, no radius.
+- **Primary:** amber fill, blue-deep text, bold uppercase label, `px-6 py-3.5`.
+- **Secondary:** plain bold uppercase text link in on-blue or ink, with a `SignArrow` icon that shifts amber and nudges right on hover.
 
-### Links / Marked Text
-- **Style:** underline in `line` color by default; underline shifts to `accent` on hover. The `.mark` utility (a thin accent-colored underline band, `0.16em` tall, positioned at 96% of the line) is reserved for one phrase per major headline — never applied to body copy or more than once per viewport.
+### Zone Badge
+- A `40px` (desktop) filled blue square, bold white letter, 800 weight, paired immediately to the left of every section's `<h2>`. Never used decoratively away from a section title.
 
-### Timeline (Experience)
-- **Rail:** a single hairline vertical border.
-- **Node:** a small circle, accent-colored ring, paper-colored fill, centered on the rail per entry.
-- **Entry:** date range + location in muted display-sans caption, role as title, company in italic serif, bullets in body serif.
+### Pictogram
+- A `64px` filled square (blue on light backgrounds, amber on blue backgrounds) holding a flat single-color geometric icon, with a bold code (e.g. "DTA") and a muted label beneath. Used once, in the hero, to represent the three domain pillars — not repeated as generic decoration elsewhere.
 
-### Skill Columns
-- No cards, no borders, no per-item indicator dots. A plain label (display sans, uppercase, tracked) over a plain list of skills in body text. Three columns on desktop, stacked on mobile.
+### Departures Board (Experience)
+- Each entry is a row: tabular date range, role title (800 uppercase), company + location line (company in blue), bullets in body weight.
+- Entries flip into view on scroll (`perspective` + `rotateX`) instead of fading — the one reserved signature motion.
+- The current role carries an amber "Boarding Now" tag instead of a border treatment — status is communicated through the tag alone, deliberately not through a side accent border (a recognized AI-slop tell the project's own detector flags).
 
-### Project Entries
-- No card chrome. Each project is a row separated by a hairline top border, title + optional "Details pending" caption, summary, and interpunct-joined tags as plain text.
+### Status / Pending Tags
+- Plain filled-background text tags (`bg-paper-dim` for "Details pending", `bg-amber` for "Boarding now") — no pill radius, no border-only chip style.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** spend the accent color only on: the `.mark` stroke, link-hover underlines, and timeline nodes.
-- **Do** keep every section inside the single `max-w-3xl` reading column.
-- **Do** set eyebrows and labels in Schibsted Grotesk, never mono.
+- **Do** treat section background color as the primary structural signal — pair every zone with an intentional blue/paper/paper-dim choice, not a default.
+- **Do** keep the departures-board flip exclusive to Experience; every other section reveals with a plain fade-up.
+- **Do** set all type in Overpass; vary weight and size, never family.
 
 ### Don't:
-- **Don't** reintroduce a persistent sidebar/dashboard nav — the masthead is a publication header, not an instrument panel.
-- **Don't** add a second saturated accent color or a "status light" pairing; this system is intentionally restrained to one.
-- **Don't** add shadows, card elevation, or pill/chip-styled tags — depth and grouping come from hairlines and typography only.
-- **Don't** let the growth-curve watermark exceed ~35% opacity or grow more visually complex; it is a watermark, not an illustration.
+- **Don't** add a border-left/border-right accent stripe to a card or row to signal state — use a filled tag or badge instead. (The project's `detect.mjs` flags this as `side-tab`, a recognized AI-generated-UI tell.)
+- **Don't** introduce a second highlight color alongside amber, or let blue serve as both field and accent.
+- **Don't** round any corner. Radius does not exist in this system.
+- **Don't** use a literal pixel font-size (`text-[15px]` and similar) — stay on Tailwind's documented type scale so every size traces to this file.

@@ -1,11 +1,13 @@
 import { useReveal } from "../hooks/useReveal";
 
-export function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
+export function SectionHeading({ zone, title }: { zone: string; title: string }) {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <div ref={ref} className="reveal mb-10 md:mb-14">
-      <p className="font-display text-sm font-medium uppercase tracking-[0.14em] text-ink-muted">{eyebrow}</p>
-      <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">{title}</h2>
+    <div ref={ref} className="reveal mb-10 flex items-center gap-4 md:mb-14">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-blue font-sign text-lg font-extrabold text-on-blue">
+        {zone}
+      </span>
+      <h2 className="font-sign text-3xl font-extrabold uppercase tracking-tight text-ink sm:text-4xl">{title}</h2>
     </div>
   );
 }

@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
-@import "@fontsource/schibsted-grotesk/500.css";
-@import "@fontsource/schibsted-grotesk/600.css";
-@import "@fontsource/schibsted-grotesk/700.css";
-@import "@fontsource/literata/400.css";
-@import "@fontsource/literata/500.css";
-@import "@fontsource/literata/400-italic.css";
-@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/overpass/400.css";
+@import "@fontsource/overpass/500.css";
+@import "@fontsource/overpass/600.css";
+@import "@fontsource/overpass/700.css";
+@import "@fontsource/overpass/800.css";
 
 @theme {
-  --font-display: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Literata", ui-serif, Georgia, serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+  --font-sign: "Overpass", ui-sans-serif, system-ui, sans-serif;
 
-  --color-paper: #f5f6f3;
-  --color-paper-raised: #ffffff;
-  --color-ink: #14171a;
-  --color-ink-muted: #5b6570;
-  --color-line: #dde1d9;
-  --color-accent: #0f8f63;
-  --color-accent-ink: #eefaf4;
+  --color-blue: #0a2f6e;
+  --color-blue-deep: #071f4d;
+  --color-paper: #ffffff;
+  --color-paper-dim: #f2f3f5;
+  --color-ink: #0a0a0a;
+  --color-ink-muted: #55585c;
+  --color-on-blue: #ffffff;
+  --color-on-blue-muted: #a9bcdd;
+  --color-line: #d8dbe0;
+  --color-line-on-blue: #23438a;
+  --color-amber: #f2b705;
 }
 
 @layer base {
@@ -48,33 +48,33 @@
   body {
     background-color: var(--color-paper);
     color: var(--color-ink);
-    font-family: var(--font-body);
+    font-family: var(--font-sign);
     -webkit-font-smoothing: antialiased;
   }
 
   ::selection {
-    background-color: var(--color-accent);
-    color: var(--color-accent-ink);
+    background-color: var(--color-amber);
+    color: var(--color-blue-deep);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-amber);
     outline-offset: 3px;
   }
 }
 
 @layer utilities {
   .mark {
-    background-image: linear-gradient(var(--color-accent), var(--color-accent));
+    background-image: linear-gradient(var(--color-amber), var(--color-amber));
     background-repeat: no-repeat;
     background-position: 0 96%;
-    background-size: 100% 0.16em;
+    background-size: 100% 0.18em;
   }
 
   .reveal {
     opacity: 0;
     transform: translateY(14px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
   .reveal.in-view {
@@ -82,8 +82,21 @@
     transform: translateY(0);
   }
 
+  .flip-row {
+    opacity: 0;
+    transform: perspective(700px) rotateX(-85deg);
+    transform-origin: top center;
+    transition: opacity 0.5s ease, transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .flip-row.in-view {
+    opacity: 1;
+    transform: perspective(700px) rotateX(0deg);
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .reveal {
+    .reveal,
+    .flip-row {
       opacity: 1;
       transform: none;
       transition: none;

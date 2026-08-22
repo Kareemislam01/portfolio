@@ -10,8 +10,13 @@ export const profile = {
   status: "Software Engineer @ Siemens — Industrial Copilot",
 };
 
+export const domains = [
+  { name: "data" as const, code: "DTA", label: "Data Analysis" },
+  { name: "frontend" as const, code: "FE", label: "Front-End" },
+  { name: "software" as const, code: "SWE", label: "Software / AI" },
+];
+
 export const about = {
-  eyebrow: "About",
   paragraphs: [
     "I'm a Computer Engineering graduate who found the intersection of software, data, and industrial systems more interesting than any one of them alone.",
     "Before writing AI-powered automation software at Siemens, I spent time inside an aircraft avionics program at Bombardier and behind data pipelines as an analyst — two different worlds that taught the same lesson: systems fail quietly until you instrument them properly.",
@@ -142,10 +147,10 @@ export const projects: Project[] = [
 ];
 
 export const nav = [
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-  { id: "skills", label: "Skills" },
-  { id: "education", label: "Education" },
-  { id: "contact", label: "Contact" },
+  { id: "about", label: "About", zone: "A" },
+  { id: "experience", label: "Experience", zone: "B" },
+  { id: "projects", label: "Projects", zone: "C" },
+  { id: "skills", label: "Skills", zone: "D" },
+  { id: "education", label: "Education", zone: "E" },
+  { id: "contact", label: "Contact", zone: "F" },
 ];

@@ -6,20 +6,20 @@ import { LinkedinIcon } from "./icons/LinkedinIcon";
 export function Contact() {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="contact" className="px-6 py-24 md:px-10 md:py-32">
+    <section id="contact" className="bg-blue px-6 py-20 text-on-blue md:px-10 md:py-28">
       <div ref={ref} className="reveal mx-auto max-w-3xl text-center">
-        <p className="font-display text-sm font-medium uppercase tracking-[0.14em] text-ink-muted">Contact</p>
-        <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-          Let's <span className="mark">talk shop.</span>
+        <p className="font-sign text-sm font-bold uppercase tracking-[0.16em] text-amber">Zone F · Contact</p>
+        <h2 className="mt-4 font-sign text-4xl font-extrabold uppercase tracking-tight sm:text-5xl">
+          Final <span className="mark text-amber">call.</span>
         </h2>
-        <p className="mx-auto mt-5 max-w-lg text-lg leading-relaxed text-ink-muted">
-          Open to conversations about software engineering, AI, and where this working paper goes next.
+        <p className="mx-auto mt-5 max-w-lg text-lg leading-relaxed text-on-blue-muted">
+          Open to conversations about software engineering, AI, and where this range goes next.
         </p>
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-6">
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded bg-ink px-6 py-3.5 text-sm font-medium text-paper-raised transition-transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-amber px-6 py-3.5 font-sign text-sm font-bold uppercase tracking-wide text-blue-deep transition-transform hover:-translate-y-0.5"
           >
             <Mail size={16} />
             {profile.email}
@@ -28,11 +28,11 @@ export function Contact() {
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-accent"
+            className="inline-flex items-center gap-1.5 font-sign text-sm font-bold uppercase tracking-wide text-on-blue"
           >
             <LinkedinIcon size={15} />
             LinkedIn
-            <ArrowUpRight size={13} />
+            <ArrowUpRight size={13} className="text-amber" />
           </a>
         </div>
       </div>
